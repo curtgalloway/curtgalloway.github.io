@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curt Galloway — Senior Software Engineer</title>
+  <style>
+    :root {
+      --text: #1a1a2e;
+      --muted: #555;
+      --accent: #2563eb;
+      --bg: #f8f9fb;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.25rem;
+    }
+
+    header .tagline {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    header .summary {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin-bottom: 1rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    /* Sections */
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    /* Experience */
+    .job {
+      margin-bottom: 1.75rem;
+    }
+
+    .job:last-child { margin-bottom: 0; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .job-header h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .job-header .company {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .job-header .dates {
+      font-size: 0.85rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .job ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .job li { margin-bottom: 0.25rem; }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skills-grid h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .skills-grid p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Certs */
+    .cert {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .cert:last-child { border-bottom: none; }
+
+    .cert .source {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* Languages */
+    .lang-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .lang-list span { color: var(--muted); }
+    .lang-list strong { color: var(--text); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 1rem;
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; padding: 0; }
+      header, section { border: 1px solid #ccc; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Curt Galloway</h1>
+      <div class="tagline">Senior Software Engineer · Full Stack · Java / Jakarta EE / Spring</div>
+      <p class="summary">
+        Systems thinker with 25+ years of experience building scalable backend platforms, financial 
+        portfolio management tools, and B2B2C products. CPSA-F certified. Currently at adesso SE 
+        developing financial services platforms in Jakarta EE and Spring Boot.
+      </p>
+      <div class="contact">
+        <span>Darmstadt, Germany</span>
+        <span><a href="mailto:curt.galloway@gmail.com">curt.galloway@gmail.com</a></span>
+        <span><a href="tel:+491715544567">+49 171-554 4567</a></span>
+        <span><a href="https://github.com/cgalloway" target="_blank">github.com/cgalloway</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div><h3>Senior Software Engineer</h3><span class="company">adesso SE</span></div>
+          <span class="dates">Oct 2023 – Present · Frankfurt</span>
+        </div>
+        <ul>
+          <li>Maintenance and development of platform functionalities for financial portfolio management and B2B2C products</li>
+          <li>Differentiation of platform components for distinct user groups (Customer Portal, Service Portal)</li>
+          <li>Enhancement of platform scalability and usability to integrate diverse financial services</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><h3>Senior Consultant</h3><span class="company">IT Frankfurt GmbH</span></div>
+          <span class="dates">Jul 2019 – Oct 2023 · Frankfurt</span>
+        </div>
+        <ul>
+          <li>Maintenance and development of existing Java components based on technical requirements</li>
+          <li>Data modeling of SQL databases; support of technical and professional conception</li>
+          <li>Participation in the standardization of an online banking portal</li>
+          <li>Processing of complex object-oriented user stories in Scrum</li>
+          <li>Modularization of monolithic architecture; conception and implementation of central components</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><h3>Software Developer</h3><span class="company">InteRES GmbH</span></div>
+          <span class="dates">Jul 2003 – Jul 2019 · Darmstadt</span>
+        </div>
+        <ul>
+          <li>Development of Mercado interfaces to Farelogix, Travelfusion, and Newskies reservation systems</li>
+          <li>Design and implementation of the Newskies Proxy; Germanwings Middleware (hotels, rental cars, rail, insurance)</li>
+          <li><strong>Technologies:</strong> Java 8, Spring Framework, Hibernate, Apache Struts</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><h3>Technical Consultant / Developer</h3><span class="company">KPMG Consulting AG</span></div>
+          <span class="dates">Aug 2001 – Jun 2003 · Frankfurt</span>
+        </div>
+        <ul>
+          <li>Design and development of the EasyTax software solution for credit and finance institutions</li>
+          <li>Swing-based GUI development; data loading module design</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div><h3>Technical Consultant / Developer</h3><span class="company">TRS AG</span></div>
+          <span class="dates">Mar 1999 – Jul 2001 · Frankfurt</span>
+        </div>
+        <ul>
+          <li>Development of the emitra workflow engine; Java/JSP/Perl report generator</li>
+          <li>Technical consultation on database management (Adabas); Linux administration</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h4>Languages</h4>
+          <p>Java, Jakarta EE, Python, JavaScript, TypeScript, SQL, Bash, Perl, C/C++, Solidity</p>
+        </div>
+        <div>
+          <h4>Backend & Frameworks</h4>
+          <p>Spring Boot, Jakarta EE (CDI, JPA), Quarkus, Hibernate, Angular 18, REST APIs</p>
+        </div>
+        <div>
+          <h4>Infrastructure & Tools</h4>
+          <p>Docker, Podman, Vagrant, Git, Maven, IntelliJ, Linux, Raspberry Pi</p>
+        </div>
+        <div>
+          <h4>Data & Testing</h4>
+          <p>PostgreSQL, DB2, Oracle DB, XML, SoapUI, ReadyAPI, Mockito</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications & Education</h2>
+      <div class="cert">
+        <span><strong>CPSA-F</strong> — Certified Professional for Software Architecture</span>
+        <span class="source">Future Network Cert GmbH, 2020</span>
+      </div>
+      <div class="cert">
+        <span><strong>Introduction to AI</strong></span>
+        <span class="source">Udacity, 2011</span>
+      </div>
+      <div class="cert">
+        <span><strong>Machine Learning</strong></span>
+        <span class="source">Coursera, 2015</span>
+      </div>
+      <div class="cert">
+        <span><strong>Computational Neuroscience</strong></span>
+        <span class="source">Coursera, 2013</span>
+      </div>
+      <div class="cert">
+        <span><strong>Introduction to Robotics (MOOC)</strong></span>
+        <span class="source">Queensland University of Technology, 2015</span>
+      </div>
+      <div class="cert">
+        <span><strong>High School Diploma</strong></span>
+        <span class="source">Lakeland High School, 1988</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <div class="lang-list">
+        <span><strong>English</strong> — native</span>
+        <span><strong>German</strong> — fluent</span>
+        <span><strong>Esperanto</strong> — conversational</span>
+        <span><strong>French</strong> — basic</span>
+      </div>
+    </section>
+
+    <footer>
+      Last updated: January 2026
+    </footer>
+
+  </div>
+</body>
+</html>
